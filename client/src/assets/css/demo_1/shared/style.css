@@ -1,0 +1,19 @@
+/* Error: Incompatible units rem and px.
+ *     ,
+ * 177 |   padding: $modal-inner-padding - $modal-footer-margin-between / 2;
+ *     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   node_modules/bootstrap/scss/_modal.scss 177:12   @import
+ *   node_modules/bootstrap/scss/bootstrap.scss 38:9  @import
+ *   src/assets/scss/shared/style.scss 140:9          root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Incompatible units rem and px.\a     \2577 \a 177 \2502    padding: $modal-inner-padding - $modal-footer-margin-between / 2;\a     \2502             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   node_modules/bootstrap/scss/_modal.scss 177:12   @import\a   node_modules/bootstrap/scss/bootstrap.scss 38:9  @import\a   src/assets/scss/shared/style.scss 140:9          root stylesheet";
+}

@@ -1,0 +1,53 @@
+{
+  "name": "dev-connector",
+  "version": "1.0.0",
+  "description": "social network",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Nicolas Baranowski",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^6.10.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.4.2",
+    "express": "^4.17.1",
+    "gravatar": "^1.6.0",
+    "jquery": "^3.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.7",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "popper.js": "^1.16.0",
+    "react": "^16.3.1",
+    "react-beautiful-dnd": "^10.1.1",
+    "react-helmet": "^5.2.1",
+    "sass": "^1.23.1",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.0",
+    "grunt": "^1.1.0",
+    "install-peers": "^1.0.3",
+    "node-pre-gyp": "0.12.0",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "postcss-loader": "^3.0.0",
+    "precss": "^3.1.2",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^0.23.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nibaranowski/dev-connector-2"
+  }
+}
