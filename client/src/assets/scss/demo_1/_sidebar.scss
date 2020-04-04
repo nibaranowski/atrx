@@ -43,6 +43,7 @@
         border-radius: 6px;
 
         i {
+          color: #787B9A;
           &.menu-arrow {
             margin-left: auto;
             margin-right: 0;
@@ -57,7 +58,7 @@
               line-height: 1;
               font-style: normal;
               vertical-align: middle;
-              color: rgba($white, 0.5);
+              color: #787B9A;
             }
           }
         }
@@ -205,6 +206,16 @@
           padding-top: auto;
           padding-bottom: auto;
           width: auto;
+
+          &:hover {
+            border-radius: 6px;
+            background-color: #1F2357 !important;
+
+            &:before {
+              background: $sidebar-light-menu-active-color;
+            }
+          }
+
           &.active {
             color: white;
             border-radius: 6px;

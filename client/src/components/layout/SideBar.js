@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentCompany } from '../../actions/companyActions';
+import Department from './Department';
+import Modal from "./Modal";
+
 
 class SideBar extends Component {
 
@@ -19,11 +22,19 @@ class SideBar extends Component {
     }
   }
 
-    onLogoutClick(e) {
-        e.preventDefault();
-        this.props.clearCurrentCompany();
-        this.props.logoutUser();
-    }
+  onLogoutClick(e) {
+      e.preventDefault();
+      this.props.clearCurrentCompany();
+      this.props.logoutUser();
+  }
+
+  showModal = () => {
+    this.setState({ show: true });
+  }
+
+  hideModal = () => {
+    this.setState({ show: false });
+  }
 
 
     render() {
@@ -96,424 +107,32 @@ class SideBar extends Component {
                         </div>
                       </div>
                     </li>
-                    <li className="nav-item" style={{
-                      // width: '210px',
-                      // margin: 'auto'
-                    }}>
-                      <a className="nav-link" data-toggle="collapse" href="#technology-dropdown" aria-expanded="false" aria-controls="technology-dropdown" style= {{
-                        // paddingLeft: '14px',
-                        // paddingRight: '14px',
-                        // width: '210px',
-                        // height: '46px',
-                        // borderRadius: '6px'
-                      }}>
-                        <i className="menu-icon mdi mdi-laptop-chromebook" style={{
-                          color: '#6E7193',
-                          marginRight: '15px'
-                        }}/>
-                        <span className="menu-title" style={{
-                          color: 'white'
-                        }}>
-                          Technology
-                        </span>
-                        <i className="menu-arrow"/>
-                      </a>
-                      <div className="collapse" id="technology-dropdown">
-                        <ul className="nav flex-column sub-menu" style={{
-                          // paddingLeft: '0px',
-                          // fontSize: '15px',
-                          // fontWeight: 'normal',
-                          // fontStretch: 'normal',
-                          // fontStyle: 'normal',
-                          // lineHeight: 'normal',
-                          // letterSpacing: 'normal',
-                          // color: '#ffffff'
-                        }}>
-                          <li className="nav-item">
-                            <a className="nav-link" href="pages/technologys/technology-1.html" style= {{
-                              // paddingLeft: '48px',
-                              // paddingRight: '14px',
-                              // width: '210px',
-                              // height: '46px',
-                              // borderRadius: '6px',
-                              // backgroundColor: '#6672fb',
-                              // marginTop: '10px'
-                            }}>
-                              Team 1
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link" href="pages/technologys/technology-2.html" style= {{
-                              // paddingLeft: '48px',
-                              // paddingRight: '14px',
-                              // width: '210px',
-                              // height: '46px',
-                              // borderRadius: '6px',
-                              // background: 'none',
-                              // marginTop: '10px'
-                            }}>
-                            Team 2
-                          </a>
-                          </li>
-                        </ul>
-                        <button type="button" className="btn btn-add">
-                          <img alt=""  className="img-xs" src={require("../../assets/images/side-bar/add-button.png")} style={{
-                            width: '20px',
-                            height: '20px',
-                            marginRight: '8px'
-                          }}/>
-                          Add Position
-                        </button>
-                        <button type="button" className="btn btn-add btn-fw">
-                          <i className="mdi mdi-plus" />Add Team
-                        </button>
-                      </div>
-                    </li>
-                    <li className="nav-item" style={{
-                      width: '210px',
-                      margin: 'auto'
-                    }}>
-                      <a className="nav-link" data-toggle="collapse" href="#marketing-dropdown" aria-expanded="false" aria-controls="marketing-dropdown" style= {{
-                        paddingLeft: '14px',
-                        paddingRight: '14px',
-                        width: '210px',
-                        height: '46px',
-                        borderRadius: '6px'
-                      }}>
-                        <i className="menu-icon mdi mdi-tag-multiple" style={{
-                          color: '#6E7193',
-                          marginRight: '15px'
-                        }}/>
-                        <span className="menu-title" style={{
-                          color: 'white'
-                        }}>
-                          Marketing
-                        </span>
-                        <i className="menu-arrow"/>
-                      </a>
-                      <div className="collapse" id="marketing-dropdown">
-                        <ul className="nav flex-column sub-menu" style={{
-                          paddingLeft: '0px',
-                          fontSize: '15px',
-                          fontWeight: 'normal',
-                          fontStretch: 'normal',
-                          fontStyle: 'normal',
-                          lineHeight: 'normal',
-                          letterSpacing: 'normal',
-                          color: '#ffffff'
-                        }}>
-                          <li className="nav-item">
-                            <a className="nav-link" href="index.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              backgroundColor: '#6672fb',
-                              marginTop: '10px'
-                            }}>
-                              Team 1
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link" href="pages/marketings/marketing-2.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              background: 'none',
-                              marginTop: '10px'
-                            }}>
-                            Team 2
-                          </a>
-                          </li>
-                        </ul>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Position
-                        </button>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Team
-                        </button>
-                      </div>
-                    </li>
-                    <li className="nav-item" style={{
-                      width: '210px',
-                      margin: 'auto'
-                    }}>
-                      <a className="nav-link" data-toggle="collapse" href="#sales-dropdown" aria-expanded="false" aria-controls="sales-dropdown" style= {{
-                        paddingLeft: '14px',
-                        paddingRight: '14px',
-                        width: '210px',
-                        height: '46px',
-                        borderRadius: '6px'
-                      }}>
-                        <i className="menu-icon mdi mdi-chart-pie" style={{
-                          color: '#6E7193',
-                          marginRight: '15px'
-                        }}/>
-                        <span className="menu-title" style={{
-                          color: 'white'
-                        }}>
-                          Sales
-                        </span>
-                        <i className="menu-arrow"/>
-                      </a>
-                      <div className="collapse" id="sales-dropdown">
-                        <ul className="nav flex-column sub-menu" style={{
-                          paddingLeft: '0px',
-                          fontSize: '15px',
-                          fontWeight: 'normal',
-                          fontStretch: 'normal',
-                          fontStyle: 'normal',
-                          lineHeight: 'normal',
-                          letterSpacing: 'normal',
-                          color: '#ffffff'
-                        }}>
-                          <li className="nav-item">
-                            <a className="nav-link" href="index.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              backgroundColor: '#6672fb',
-                              marginTop: '10px'
-                            }}>
-                              Team 1
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link" href="pages/saless/sales-2.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              background: 'none',
-                              marginTop: '10px'
-                            }}>
-                            Team 2
-                          </a>
-                          </li>
-                        </ul>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Position
-                        </button>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Team
-                        </button>
-                      </div>
-                    </li>
-                    <li className="nav-item" style={{
-                      width: '210px',
-                      margin: 'auto'
-                    }}>
-                      <a className="nav-link" data-toggle="collapse" href="#leagal-dropdown" aria-expanded="false" aria-controls="leagal-dropdown" style= {{
-                        paddingLeft: '14px',
-                        paddingRight: '14px',
-                        width: '210px',
-                        height: '46px',
-                        borderRadius: '6px'
-                      }}>
-                        <i className="menu-icon mdi mdi-file-document" style={{
-                          color: '#6E7193',
-                          marginRight: '15px'
-                        }}/>
-                        <span className="menu-title" style={{
-                          color: 'white'
-                        }}>
-                          Legal
-                        </span>
-                        <i className="menu-arrow"/>
-                      </a>
-                      <div className="collapse" id="leagal-dropdown">
-                        <ul className="nav flex-column sub-menu" style={{
-                          paddingLeft: '0px',
-                          fontSize: '15px',
-                          fontWeight: 'normal',
-                          fontStretch: 'normal',
-                          fontStyle: 'normal',
-                          lineHeight: 'normal',
-                          letterSpacing: 'normal',
-                          color: '#ffffff'
-                        }}>
-                          <li className="nav-item">
-                            <a className="nav-link" href="index.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              backgroundColor: '#6672fb',
-                              marginTop: '10px',
-                              fontSize: '14px',
-                              color: '#ffffff'
-                            }}>
-                              Team 1
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link" href="pages/leagals/leagal-2.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              background: 'none',
-                              marginTop: '10px',
-                              fontSize: '14px',
-                              color: 'red'
-                            }}>
-                            Team 2
-                          </a>
-                          </li>
-                        </ul>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Position
-                        </button>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Team
-                        </button>
-                      </div>
-                    </li>
-                    <li className="nav-item" style={{
-                      width: '210px',
-                      margin: 'auto'
-                    }}>
-                      <a className="nav-link" data-toggle="collapse" href="#operations-dropdown" aria-expanded="false" aria-controls="operation-dropdown" style= {{
-                        paddingLeft: '14px',
-                        paddingRight: '14px',
-                        width: '210px',
-                        height: '46px',
-                        borderRadius: '6px'
-                      }}>
-                        <i className="menu-icon mdi mdi-settings" style={{
-                          color: '#6E7193',
-                          marginRight: '15px'
-                        }}/>
-                        <span className="menu-title" style={{
-                          color: 'white'
-                        }}>
-                          Operations
-                        </span>
-                        <i className="menu-arrow"/>
-                      </a>
-                      <div className="collapse" id="operations-dropdown">
-                        <ul className="nav flex-column sub-menu" style={{
-                          paddingLeft: '0px',
-                          fontSize: '15px',
-                          fontWeight: 'normal',
-                          fontStretch: 'normal',
-                          fontStyle: 'normal',
-                          lineHeight: 'normal',
-                          letterSpacing: 'normal',
-                          color: '#ffffff'
-                        }}>
-                          <li className="nav-item">
-                            <a className="nav-link" href="index.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              backgroundColor: '#6672fb',
-                              marginTop: '10px'
-                            }}>
-                              Team 1
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link" href="pages/operationss/operations-2.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              background: 'none',
-                              marginTop: '10px'
-                            }}>
-                            Team 2
-                          </a>
-                          </li>
-                        </ul>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Position
-                        </button>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Team
-                        </button>
-                      </div>
-                    </li>
-                    <li className="nav-item" style={{
-                      width: '210px',
-                      margin: 'auto'
-                    }}>
-                      <a className="nav-link" data-toggle="collapse" href="#management-dropdown" aria-expanded="false" aria-controls="management-dropdown" style= {{
-                        paddingLeft: '14px',
-                        paddingRight: '14px',
-                        width: '210px',
-                        height: '46px',
-                        borderRadius: '6px'
-                      }}>
-                        <i className="menu-icon mdi mdi-briefcase" style={{
-                          color: '#6E7193',
-                          marginRight: '15px'
-                        }}/>
-                        <span className="menu-title" style={{
-                          color: 'white'
-                        }}>
-                          Management
-                        </span>
-                        <i className="menu-arrow"/>
-                      </a>
-                      <div className="collapse" id="management-dropdown">
-                        <ul className="nav flex-column sub-menu" style={{
-                          paddingLeft: '0px',
-                          fontSize: '15px',
-                          fontWeight: 'normal',
-                          fontStretch: 'normal',
-                          fontStyle: 'normal',
-                          lineHeight: 'normal',
-                          letterSpacing: 'normal',
-                          color: '#ffffff'
-                        }}>
-                          <li className="nav-item">
-                            <a className="nav-link" href="index.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              backgroundColor: '#6672fb',
-                              marginTop: '10px'
-                            }}>
-                              Team 1
-                            </a>
-                          </li>
-                          <li className="nav-item">
-                            <a className="nav-link" href="pages/managements/management-2.html" style= {{
-                              paddingLeft: '48px',
-                              paddingRight: '14px',
-                              width: '210px',
-                              height: '46px',
-                              borderRadius: '6px',
-                              background: 'none',
-                              marginTop: '10px'
-                            }}>
-                            Team 2
-                          </a>
-                          </li>
-                        </ul>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Position
-                        </button>
-                        <button type="button" className="btn btn-success btn-fw">
-                          <i className="mdi mdi-plus" />Add Team
-                        </button>
-                      </div>
-                    </li>
 
+
+                     <Department icon={"mdi-laptop-chromebook"} name={"Technology"} teamOneName={"IOS Team"} teamTwoName={"Android Team"} depId={"technology-dropdown"}/>
+                     <Department icon={"mdi-tag-multiple"} name={"Marketing"} teamOneName={"Inbound"} teamTwoName={"Outbound"} depId={"marketing-dropdown"}/>
+                     <Department icon={"mdi-chart-pie"} name={"Sales"} teamOneName={"Entreprise"} teamTwoName={"SMB"} depId={"sales-dropdown"}/>
+                     <Department icon={"mdi-file-document"} name={"Legal"} teamOneName={"Litigation"} teamTwoName={"Commercial"} depId={"legal-dropdown"}/>
+                     <Department icon={"mdi-settings"} name={"Operations"} teamOneName={"Performance"} teamTwoName={"Analytics"} depId={"operations-dropdown"}/>
+                     <Department icon={"mdi-briefcase"} name={"Management"} teamOneName={"Top"} teamTwoName={"Middle"} depId={"management-dropdown"}/>
+                     <button type="button" className="btn-add btn-first" style={{
+                       marginLeft: '0px',
+                       paddingLeft: '36px',
+                       width: 'auto',
+                       textAlign: 'left'
+                     }}>
+                       <img alt=""  className="img-xs" src={require("../../assets/images/side-bar/add-button.png")}/>
+                       Add Department
+                     </button>
+
+
+
+                    {/* <Modal show={this.state.show} handleClose={this.hideModal} >
+                      <p>Modal</p>
+                      <p>Data</p>
+                    </Modal>
+                    <button type='button' onClick={this.showModal}>Open</button>
+ */}
                     {/* <li className="nav-item">
                       <a className="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="false" aria-controls="page-layouts">
                         <i className="menu-icon mdi mdi-notification-clear-all" />
