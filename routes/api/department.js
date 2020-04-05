@@ -93,13 +93,13 @@ router.post(
   '/',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
-    const { errors, isValid } = validateDepartmentInput(req.body);
-
-    // Check Validation
-    if (!isValid) {
-      // Return any errors with 400 status
-      return res.status(400).json(errors);
-    }
+    // const { errors, isValid } = validateDepartmentInput(req.body);
+    //
+    // // Check Validation
+    // if (!isValid) {
+    //   // Return any errors with 400 status
+    //   return res.status(400).json(errors);
+    // }
     //console.log('this.props', this.props)
 
     // Get fields
