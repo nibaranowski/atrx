@@ -43,8 +43,14 @@ class Landing extends Component {
                    <div className="col-md-8 mx-auto">
                      <div className="row">
                        <div className="col-lg-7">
-                         <h1 className="mr-2 text-white"> Manage employees from application to separation. </h1>
-                         <h3 className="font-weight-light text-white"> Manage employees end-to-end in one app. </h3>
+                         <h1 className="mr-2 text-white">
+                           Manage employees from application to separation.
+                         </h1>
+                         <h3 className="font-weight-light text-white" style={{
+                           fontWeight: '200'
+                         }}>
+                           Manage employees end-to-end in one app.
+                         </h3>
                          <div className="mt-5">
                            {/*<button className="btn btn-primary btn-lg mr-2">LEARN MORE</button>*/}
                            <Link to="/register" >

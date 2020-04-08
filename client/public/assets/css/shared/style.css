@@ -2361,7 +2361,7 @@ fieldset:disabled a {
   border-color: #8862e0; }
   .btn-info:hover, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-submit:hover {
     color: #fff;
-    background-color: #7042da;
+    background-color: #5C66FA;
     border-color: #6837d8; }
   .btn-info:focus, .editable-container.editable-inline .editableform .control-group .editable-buttons .editable-submit:focus, .btn-info.focus, .editable-container.editable-inline .editableform .control-group .editable-buttons .focus.editable-submit {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(136, 98, 224, 0.5);
@@ -8439,7 +8439,7 @@ input:focus {
 
 /* NavBar */
 .navbar.default-layout {
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   background: #6672FB;
   transition: background 0.25s ease;
   -webkit-transition: background 0.25s ease;
@@ -8711,7 +8711,7 @@ input:focus {
 :root,
 body {
   font-size: 1rem;
-  font-family: "Cabin", sans-serif; }
+  font-family: "CircularStd-Medium", sans-serif; }
 
 .h1,
 .h2,
@@ -8725,7 +8725,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -8843,7 +8843,7 @@ address p {
   margin: 0.38rem 0 0.75rem; }
 
 .card-title {
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   font-weight: 500;
   color: #404852;
   margin-bottom: 22px;
@@ -8854,13 +8854,13 @@ address p {
 
 .card-subtitle {
   font-weight: 300;
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   margin-top: 0.625rem;
   margin-bottom: 0.625rem; }
 
 .card-description {
   margin-bottom: 0.9375rem;
-  font-family: "Cabin", sans-serif; }
+  font-family: "CircularStd-Medium", sans-serif; }
   .rtl .card-description {
     text-align: right; }
 
@@ -8973,7 +8973,7 @@ pre {
   -ms-transition: all 0.25s ease;
   border-top: 1px solid #dbdbdb;
   font-size: calc(0.875rem - 0.05rem);
-  font-family: "Cabin", sans-serif; }
+  font-family: "CircularStd-Medium", sans-serif; }
   .footer a {
     color: #19d895;
     font-size: inherit; }
@@ -9364,7 +9364,7 @@ pre {
     width: 40%; }
     .card-revenue-table .revenue-item .revenue-amount p {
       font-size: 1.25rem;
-      font-family: "Cabin", sans-serif;
+      font-family: "CircularStd-Medium", sans-serif;
       font-weight: 600;
       text-align: right; }
       .rtl .card-revenue-table .revenue-item .revenue-amount p {
@@ -9376,7 +9376,7 @@ pre {
   color: #ffffff; }
   .card-revenue .highlight-text {
     font-size: 1.875rem;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     font-weight: 500; }
   .card-revenue .badge {
     background-color: rgba(255, 255, 255, 0.2);
@@ -9993,7 +9993,7 @@ pre {
   font-weight: initial;
   line-height: 1;
   padding: 0.2rem 0.3rem;
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   font-weight: 600; }
   .badge:empty {
     display: inline-block;
@@ -10287,7 +10287,7 @@ pre {
 .btn, .ajax-upload-dragdrop .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .swal2-styled, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel, .wizard > .actions a {
   font-size: 0.875rem;
   line-height: 1;
-  font-family: "Cabin", sans-serif; }
+  font-family: "CircularStd-Medium", sans-serif; }
   .btn i, .ajax-upload-dragdrop .ajax-file-upload i, .swal2-modal .swal2-buttonswrapper .swal2-styled i, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm i, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-cancel i, .wizard > .actions a i {
     margin-right: 0.3125rem;
     font-size: inherit; }
@@ -11477,7 +11477,7 @@ pre {
 .tt-query,
 .typeahead {
   border: 1px solid #dbdbdb;
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   font-size: 0.75rem;
   padding: 1.32rem .75rem;
   line-height: 14px;
@@ -11554,7 +11554,7 @@ select.typeahead {
     -ms-flex-align: center;
     align-items: center;
     padding: 15px;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     font-size: 0.875rem; }
     .icons-list > div i {
       display: inline-block;
@@ -13097,7 +13097,7 @@ ul {
     .preview-list .preview-item .preview-item-content p {
       margin-bottom: 10px; }
       .preview-list .preview-item .preview-item-content p .content-category {
-        font-family: "Cabin", sans-serif;
+        font-family: "CircularStd-Medium", sans-serif;
         padding-right: 15px;
         border-right: 1px solid #dbdbdb; }
   .preview-list .preview-item .preview-actions {
@@ -13140,7 +13140,7 @@ ul {
     .pricing-table .pricing-card .pricing-card-body .plan-features li {
       text-align: left;
       padding: 4px 0;
-      font-family: "Cabin", sans-serif;
+      font-family: "CircularStd-Medium", sans-serif;
       font-size: 0.875rem; }
 
 /* Tables */
@@ -13149,7 +13149,7 @@ ul {
   .table thead th, .jsgrid .jsgrid-table thead th {
     border-top: 0;
     border-bottom-width: 1px;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     font-weight: 500; }
     .table thead th i, .jsgrid .jsgrid-table thead th i {
       margin-left: 0.325rem; }
@@ -13191,7 +13191,7 @@ ul {
 /* Tabs */
 .nav-pills .nav-item .nav-link,
 .nav-tabs .nav-item .nav-link {
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   line-height: 1;
   font-size: 0.875rem;
   color: #000;
@@ -13204,7 +13204,7 @@ ul {
     margin-right: 10px; }
 
 .tab-content {
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   font-size: 0.875rem;
   line-height: 1.71; }
 
@@ -13504,7 +13504,7 @@ ul {
       right: unset;
       left: 10px; }
   .settings-panel .events p {
-    font-family: "Cabin", sans-serif; }
+    font-family: "CircularStd-Medium", sans-serif; }
   .rtl .settings-panel .events p {
     text-align: right; }
   .rtl .settings-panel {
@@ -13602,7 +13602,7 @@ ul {
   min-width: 5.625rem;
   z-index: 1029; }
   .tooltip .tooltip-inner {
-    font-family: "Cabin", sans-serif; }
+    font-family: "CircularStd-Medium", sans-serif; }
 
 .tooltip-primary .tooltip-inner {
   background: #6672FB;
@@ -14167,13 +14167,13 @@ ul {
       padding: 11px 25px;
       background: #fbfbfb;
       width: 80%;
-      font-family: "Cabin", sans-serif;
+      font-family: "CircularStd-Medium", sans-serif;
       font-size: 13px;
       font-weight: 300;
       border-radius: 4px; }
     .horizontal-timeline .time-frame .event .event-info {
       margin-top: 0.8rem;
-      font-family: "Cabin", sans-serif;
+      font-family: "CircularStd-Medium", sans-serif;
       font-size: 12px;
       font-weight: 400;
       color: #858585; }
@@ -14419,7 +14419,7 @@ ul {
       font-size: 0.875rem;
       color: #858585;
       margin-bottom: 0;
-      font-family: "Cabin", sans-serif; }
+      font-family: "CircularStd-Medium", sans-serif; }
     .email-wrapper .mail-sidebar .menu-bar .online-status .status {
       height: 10px;
       width: 10px;
@@ -14473,7 +14473,7 @@ ul {
         padding: 5px 10px 0 15px; }
         .email-wrapper .mail-sidebar .menu-bar .profile-list-item a .user .u-name {
           margin: 0;
-          font-family: "Cabin", sans-serif;
+          font-family: "CircularStd-Medium", sans-serif;
           font-size: 0.875rem;
           line-height: 1;
           color: #252C46;
@@ -14518,7 +14518,7 @@ ul {
       .email-wrapper .mail-list-container .mail-list .content .sender-name {
         margin-bottom: 0;
         font-size: 0.875rem;
-        font-family: "Cabin", sans-serif;
+        font-family: "CircularStd-Medium", sans-serif;
         max-width: 95%; }
       .email-wrapper .mail-list-container .mail-list .content .message_text {
         margin: 0;
@@ -14551,13 +14551,13 @@ ul {
     padding-bottom: 0; }
     .email-wrapper .message-body .sender-details .details .msg-subject {
       margin-bottom: 0;
-      font-family: "Cabin", sans-serif; }
+      font-family: "CircularStd-Medium", sans-serif; }
     .email-wrapper .message-body .sender-details .details .sender-email {
       margin-bottom: 20px;
-      font-family: "Cabin", sans-serif; }
+      font-family: "CircularStd-Medium", sans-serif; }
       .email-wrapper .message-body .sender-details .details .sender-email i {
         font-size: 1rem;
-        font-family: "Cabin", sans-serif;
+        font-family: "CircularStd-Medium", sans-serif;
         margin: 0 1px 0 7px; }
 
 .email-wrapper .message-body .message-content {
@@ -14619,7 +14619,7 @@ ul {
   left: 50%;
   z-index: 1000;
   font-size: 0.875rem;
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   font-weight: initial;
   line-height: 1.85;
   border-radius: 10px;
@@ -14627,7 +14627,7 @@ ul {
   transform: scale(0.8); }
   .avgrund-popin p {
     font-size: 0.875rem;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     font-weight: initial; }
 
 .avgrund-overlay {
@@ -14699,13 +14699,13 @@ body.avgrund-active {
 .tour-tour {
   padding: 0;
   border: 0;
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   background: #ffffff; }
   .tour-tour .popover-title {
     background: #6672FB;
     color: #ffffff;
     font-size: 0.8125rem;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     padding: 0.75rem; }
   .tour-tour.left .arrow:after {
     border-left-color: #ffffff; }
@@ -14971,7 +14971,7 @@ body.avgrund-active {
   .context-menu-list .context-menu-item span {
     color: #000;
     font-size: 0.75rem;
-    font-family: "Cabin", sans-serif; }
+    font-family: "CircularStd-Medium", sans-serif; }
   .context-menu-list .context-menu-item.context-menu-hover {
     background: #000; }
     .context-menu-list .context-menu-item.context-menu-hover span {
@@ -15074,7 +15074,7 @@ body.avgrund-active {
           background: #ffffff; }
         .datepicker.datepicker-dropdown .datepicker-days table.table-condensed thead tr th.dow,
         .datepicker.datepicker-inline .datepicker-days table.table-condensed thead tr th.dow {
-          font-family: "Cabin", sans-serif;
+          font-family: "CircularStd-Medium", sans-serif;
           color: #6c757d;
           font-size: 0.875rem;
           font-weight: initial; }
@@ -15421,7 +15421,7 @@ body.avgrund-active {
 
 .jsgrid .jsgrid-table th {
   font-weight: initial;
-  font-family: "Cabin", sans-serif; }
+  font-family: "CircularStd-Medium", sans-serif; }
 
 .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number] {
   padding: 0.56rem 0; }
@@ -15548,7 +15548,7 @@ body.avgrund-active {
           background: #6672FB;
           border-radius: 100%; }
         .noUi-target .noUi-base .noUi-origin .noUi-handle .noUi-tooltip {
-          font-family: "Cabin", sans-serif;
+          font-family: "CircularStd-Medium", sans-serif;
           border-radius: 4px;
           border: none;
           line-height: 1;
@@ -15567,7 +15567,7 @@ body.avgrund-active {
   .noUi-target .noUi-pips .noUi-value {
     color: #000;
     font-size: 0.94rem;
-    font-family: "Cabin", sans-serif; }
+    font-family: "CircularStd-Medium", sans-serif; }
 
 /* Slider Color variations */
 .slider-primary .noUi-base .noUi-connect {
@@ -15929,7 +15929,7 @@ body.avgrund-active {
   .swal2-modal .swal2-title {
     font-size: 25px;
     line-height: 1;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     color: #212529;
     font-weight: initial;
     margin-bottom: 0; }
@@ -15956,7 +15956,7 @@ body.avgrund-active {
         font-weight: initial; }
   .swal2-modal .swal2-content {
     font-size: 0.875rem;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     color: #212529;
     font-weight: initial;
     margin-top: 11px; }
@@ -16256,7 +16256,7 @@ div.tagsinput {
       text-decoration: none;
       border-radius: 5px;
       font-size: 0.875rem;
-      font-family: "Cabin", sans-serif; }
+      font-family: "CircularStd-Medium", sans-serif; }
       .wizard > .steps a:hover {
         display: block;
         width: auto;
@@ -16516,7 +16516,7 @@ div.tagsinput {
         border-color: #e5e5e5;
         color: #b6b6b6; }
   .auth.theme-one .auto-form-wrapper .form-group .submit-btn {
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     font-size: 13px;
     padding: 12px 8px;
     font-weight: 600; }
@@ -16648,7 +16648,7 @@ div.tagsinput {
           border-right: none;
           color: #dfdfdf; }
       .auth.theme-two .auto-form-wrapper form .form-group .submit-btn {
-        font-family: "Cabin", sans-serif;
+        font-family: "CircularStd-Medium", sans-serif;
         font-size: 13px;
         padding: 11px 33px;
         font-weight: 600;}
@@ -16726,7 +16726,7 @@ div.tagsinput {
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 0.9375rem;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     text-align: left; }
     @media (min-width: 992px) {
       .landing-page .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -16820,7 +16820,7 @@ div.tagsinput {
         .landing-page .feature-list .feature-list-row .feature-list-item:last-child {
           border-right: 0; } }
     .landing-page .feature-list .feature-list-row .feature-list-item .feature-description {
-      font-family: "Cabin", sans-serif; }
+      font-family: "CircularStd-Medium", sans-serif; }
 
 .landing-page .footer {
   background: linear-gradient(120deg, #556cdc, #128bfc, #18bef1);
@@ -16850,7 +16850,7 @@ div.tagsinput {
       padding-top: 0;
       padding-bottom: 0;
       font-size: 0.9375rem;
-      font-family: "Cabin", sans-serif;
+      font-family: "CircularStd-Medium", sans-serif;
       line-height: 1; }
     .landing-page .footer .footer-top .nav .nav-item:last-child .nav-link {
       border-right: 0; }
@@ -16868,7 +16868,7 @@ div.tagsinput {
       padding-bottom: 0.75rem; }
   .landing-page .footer .footer-bottom {
     color: #ffffff;
-    font-family: "Cabin", sans-serif; }
+    font-family: "CircularStd-Medium", sans-serif; }
 
 .profile-page .profile-header {
   width: 100%;
@@ -16878,11 +16878,11 @@ div.tagsinput {
   border-radius: 5px; }
   .profile-page .profile-header .profile-info .profile-user-name {
     margin-bottom: 0;
-    font-family: "Cabin", sans-serif;
+    font-family: "CircularStd-Medium", sans-serif;
     font-weight: 600; }
   .profile-page .profile-header .profile-info .profile-user-designation {
     margin-bottom: 0;
-    font-family: "Cabin", sans-serif; }
+    font-family: "CircularStd-Medium", sans-serif; }
   .profile-page .profile-header .profile-info .br-wrapper {
     padding-left: 15px; }
     .profile-page .profile-header .profile-info .br-wrapper .br-widget {

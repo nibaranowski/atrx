@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Modal from 'react-awesome-modal';
+// import Modal from 'react-awesome-modal';
 
 import { logoutUser } from '../../actions/authActions';
 import { clearCurrentCompany } from '../../actions/companyActions';
 import Department from './Department';
+import AddDepartment from './AddDepartment';
 
-import CreateDepartment from '../department/department-actions/CreateDepartment';
-
+// import CreateDepartment from '../department/department-actions/CreateDepartment';
 
 
 
@@ -29,24 +29,24 @@ class SideBar extends Component {
   // }
 
 
-  constructor(props) {
-      super(props);
-      this.state = {
-          visible : false
-      }
-  }
-
-  openModal() {
-      this.setState({
-          visible : true
-      });
-  }
-
-  closeModal() {
-      this.setState({
-          visible : false
-      });
-  }
+  // constructor(props) {
+  //     super(props);
+  //     this.state = {
+  //         visible : false
+  //     }
+  // }
+  //
+  // openModal() {
+  //     this.setState({
+  //         visible : true
+  //     });
+  // }
+  //
+  // closeModal() {
+  //     this.setState({
+  //         visible : false
+  //     });
+  // }
 
   componentDidMount() {
     if (!this.props.auth.isAuthenticated) {
@@ -66,17 +66,10 @@ class SideBar extends Component {
       this.props.logoutUser();
   }
 
-  showModal = () => {
-    this.setState({ show: true });
-  }
-
-  hideModal = () => {
-    this.setState({ show: false });
-  }
 
 
 render() {
-    const { isAuthenticated } = this.props.auth;
+    const { isAuthenticated, user } = this.props.auth;
 
     const navloggedIn = (
       <div>
@@ -153,21 +146,9 @@ render() {
                  <Department icon={"mdi-file-document"} name={"Legal"} teamOneName={"Litigation"} teamTwoName={"Commercial"} depId={"legal-dropdown"}/>
                  <Department icon={"mdi-settings"} name={"Operations"} teamOneName={"Performance"} teamTwoName={"Analytics"} depId={"operations-dropdown"}/>
                  <Department icon={"mdi-briefcase"} name={"Management"} teamOneName={"Top"} teamTwoName={"Middle"} depId={"management-dropdown"}/>
-                 <button
-                   type="button"
-                   onClick={() => this.openModal()}
-                   className="btn-add btn-first"
-                   style={{
-                     marginLeft: '0px',
-                     paddingLeft: '36px',
-                     width: 'auto',
-                     textAlign: 'left'
-                    }}
-                  >
-                   <img alt=""  className="img-xs" src={require("../../assets/images/side-bar/add-button.png")}/>
-                   Add Department
-                 </button>
-                <section>
+                 <AddDepartment userId={user.id}/>
+
+                {/* <section>
                   <Modal
                     visible={this.state.visible}
                     width="50%"
@@ -205,11 +186,12 @@ render() {
                         }}/>
                       </button>
                       <CreateDepartment />
-                      {/* <a href="javascript:void(0);" onClick={() => this.closeModal()}>Discard</a>
-                      <a href="javascript:void(0);" onClick={() => this.closeModal()}>Save</a> */}
+                      <a href="javascript:void(0);" onClick={() => this.closeModal()}>Discard</a>
+                      <a href="javascript:void(0);" onClick={() => this.closeModal()}>Save</a>
                     </div>
                   </Modal>
                 </section>
+                 */}
               </ul>
             </nav>
           </div>

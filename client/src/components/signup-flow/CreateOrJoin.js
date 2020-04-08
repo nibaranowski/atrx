@@ -121,7 +121,7 @@ class CreateOrJoin extends Component {
               <div className="col-md-12 grid-margin stretch-card">
                 <div className="card">
                   {/* <div className="card-body"> */}
-                    {console.log('test-inside create company')}
+                    {/* {console.log('test-inside create company')} */}
                     {/* <h4 className="card-title">Create or join a company?</h4> */}
                     {/* <p className="card-description mb-1"> Let's get some information to make your company </p> */}
                     {/* <small className="text-muted">* required fields</small> */}
@@ -256,10 +256,10 @@ class CreateOrJoin extends Component {
                       <h4 className="card-title">Create or Join Company?</h4>
                       <p className="card-description">Join existing company if you're not a new user.</p>
                       <div className="template-demo">
-                        <Link className="dropdown-item" to={`/admin-user/AdminUserId/create-company`}>
+                        <Link className="dropdown-item" to={`/admin-user/${this.props.auth.user.id}/create-company`}>
                           <button type="button" className="btn btn-primary btn-fw">Create New Company</button>
                         </Link>
-                        <Link className="dropdown-item" to={`/admin-user/AdminUserId/join-company`}>
+                        <Link className="dropdown-item" to={`/admin-user/${this.props.auth.user.id}/join-company`}>
                           <button type="button" className="btn btn-primary btn-fw">Join Existing Company</button>
                         </Link>
                       </div>
@@ -276,10 +276,11 @@ class CreateOrJoin extends Component {
 }
 CreateOrJoin.propTypes = {
   //company: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
-  company: state.company,
+  auth: state.auth,
   errors: state.errors
 });
 export default connect(mapStateToProps, { createCompany })(

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
+var ObjectId = require('mongodb').ObjectID;
 
 // Load validation
 //const validateCompanyInput = require('../../validation/company')
@@ -45,15 +46,13 @@ router.get('/all', (req, res) => {
 // @access  Private
 router.get('/:company_id', passport.authenticate('jwt', { session: false }), (req, res) => {
   const errors = {};
-
   Company.findOne({ _id: req.params.company_id })
-    .then(res.json({msg: 'company request work'}))
+    // .then(res.json({msg: 'company request work'}))
     .then(company => {
       if (!company) {
         errors.nocompany = 'There is no company for this ID';
         res.status(404).json(errors);
       }
-
       res.json(company);
     })
     .catch(err =>
@@ -62,25 +61,27 @@ router.get('/:company_id', passport.authenticate('jwt', { session: false }), (re
 });
 
 // @route   GET api/company/admin-user/:adminUser_id
-// @desc    Get companys by adminUser ID
+// @desc    Get company by adminUser ID
 // @access  Private
 router.get('/admin-user/:adminUser_id', passport.authenticate('jwt', { session: false }), (req, res) => {
   const errors = {};
-  console.log('Fetching all companys by adminUser ID')
+  console.log('Fetching company by adminUser ID')
+  // var id = req.params.adminUser_id;
+  // var oId = new ObjectId(id);
 
   Company.find({ adminUser: {
-      _id: req.params.adminUser_id
+      _id: ObjectId(req.params.adminUser_id)
       }
     })
     .then(companys => {
       if (!companys) {
-        errors.nocompanys = 'There is no companys for this adminUser';
+        errors.nocompanys = 'There is no company for this adminUser';
         res.status(404).json(errors);
       }
       res.json(companys);
     })
     .catch(err =>
-      res.status(404).json({ company: 'There is no companys for this adminUser' })
+      res.status(404).json({ company: 'There is no company for this adminUser' })
     );
 });
 
@@ -104,8 +105,7 @@ router.post(
     // Get fields
     const companyFields = {};
     //console.log(req)
-    const adminUser = req.user;
-    companyFields.adminUser = adminUser.id;
+    companyFields.adminUserId = req.body.adminUserId;
     //companyFields.trip = req.body.trip;
     companyFields.name = req.body.name;
     // if (req.body.order) companyFields.order = req.body.order;
@@ -118,9 +118,9 @@ router.post(
     // if (req.body.price) companyFields.price = req.body.price;
     // if (req.body.pctBooked) companyFields.pctBooked = req.body.pctBooked;
     // if (req.body.budgetAllocation) companyFields.budgetAllocation = req.body.budgetAllocation;
-    console.log(companyFields)
+    // console.log(companyFields)
 
-    Company.findOne({ adminUser: adminUser.id }).then(company => {
+    Company.findOne({ adminUserId: companyFields.adminUserId }).then(company => {
         // Create
         // Check if handle exists
         Company.findOne({ handle: companyFields.handle }).then(company => {

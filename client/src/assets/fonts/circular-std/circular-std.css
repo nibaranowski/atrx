@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'CircularStd-Medium';
+  font-style: normal;
+  src: local('CircularStd-Medium'), local('CircularStd-Medium'),
+    url('./CircularStd-Medium.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'CircularStd-Black';
+  font-style: normal;
+  src: local('CircularStd-Black'), local('CircularStd-Black'),
+    url('./CircularStd-Black.woff') format('woff'),
+}
+@font-face {
+  font-family: 'CircularStd-BlackItalic';
+  font-style: normal;
+  src: local('CircularStd-BlackItalic'), local('CircularStd-BlackItalic'),
+    url('./CircularStd-BlackItalic.woff') format('woff'),
+}
+@font-face {
+  font-family: 'CircularStd-Bold';
+  font-style: normal;
+  src: local('CircularStd-Bold'), local('CircularStd-Bold'),
+    url('./CircularStd-Bold.woff') format('woff'),
+}
+@font-face {
+  font-family: 'CircularStd-BoldItalic';
+  font-style: normal;
+  src: local('CircularStd-BoldItalic'), local('CircularStd-BoldItalic'),
+    url('./CircularStd-BoldItalic.woff') format('woff'),
+}
+@font-face {
+  font-family: 'CircularStd-Book';
+  font-style: normal;
+  src: local('CircularStd-Book'), local('CircularStd-Book'),
+    url('./CircularStd-Book.woff') format('woff'),
+}
+@font-face {
+  font-family: 'CircularStd-BookItalic';
+  font-style: normal;
+  src: local('CircularStd-BookItalic'), local('CircularStd-BookItalic'),
+    url('./CircularStd-BookItalic.woff') format('woff'),
+}
+@font-face {
+  font-family: 'CircularStd-MediumItalic';
+  font-style: normal;
+  src: local('CircularStd-MediumItalic'), local('CircularStd-MediumItalic'),
+    url('./CircularStd-MediumItalic.woff') format('woff'),
+}

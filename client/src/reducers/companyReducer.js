@@ -1,6 +1,6 @@
 import {
   GET_ALL_COMPANYS,
-  GET_ALL_COMPANYS_BY_ADMINUSER_ID,
+  GET_COMPANY_BY_ADMINUSER_ID,
   GET_COMPANY_BY_COMPANY_ID,
   COMPANY_LOADING,
   DELETE_COMPANY_BY_COMPANY_ID
@@ -20,7 +20,7 @@ export default function(state = initialState, action) {
               companys: action.payload,
               loading: false
           }
-      case GET_ALL_COMPANYS_BY_ADMINUSER_ID:
+      case GET_COMPANY_BY_ADMINUSER_ID:
           return {
               ...state,
               companys: action.payload,

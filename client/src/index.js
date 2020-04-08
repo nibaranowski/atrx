@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/demo_1/style.css';
+import './assets/fonts/circular-std/circular-std.css';
 //import './assets/css/custom.css';
 import App from './App';
 

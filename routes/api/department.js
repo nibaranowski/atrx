@@ -104,7 +104,8 @@ router.post(
 
     // Get fields
     const departmentFields = {};
-    departmentFields.company = req.company.id;
+    const adminUser = req.user;
+    departmentFields.adminUser = adminUser.id;
     //departmentFields.trip = req.body.trip;
     departmentFields.name = req.body.name;
     // if (req.body.order) departmentFields.order = req.body.order;
@@ -118,15 +119,15 @@ router.post(
     // if (req.body.pctBooked) departmentFields.pctBooked = req.body.pctBooked;
     // if (req.body.budgetAllocation) departmentFields.budgetAllocation = req.body.budgetAllocation;
 
-    Department.findOne({ company: req.body.company.id }).then(department => {
+    Department.findOne({ adminUser: adminUser.id  }).then(department => {
         // Create
 
         // Check if handle exists
         Department.findOne({ handle: departmentFields.handle }).then(department => {
-          if (department) {
-            errors.handle = 'That handle already exists';
-            res.status(400).json(errors);
-          }
+          // if (department) {
+          //   errors.handle = 'That handle already exists';
+          //   res.status(400).json(errors);
+          // }
 
           // Save Department
           new Department(departmentFields).save().then(department => res.json(department));

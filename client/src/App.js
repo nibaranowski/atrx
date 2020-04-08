@@ -201,25 +201,25 @@ class App extends Component {
                     {/* <div className="company-routes"> */}
                       <Switch>
                         <PrivateRoute
-                          exact path="/admin-user/AdminUserId/create-company"
-                          component={CreateCompany}
-                        />
-                      </Switch>
-                      <Switch>
-                        <PrivateRoute
-                          exact path="/admin-user/:email/create-or-join"
+                          exact path="/admin-user/:adminUserId/create-or-join"
                           component={CreateOrJoin}
                         />
                       </Switch>
                       <Switch>
                         <PrivateRoute
-                          exact path="/admin-user/adminUserId/company/companyId/invite-users"
+                          exact path="/admin-user/:adminUserId/create-company"
+                          component={CreateCompany}
+                        />
+                      </Switch>
+                      <Switch>
+                        <PrivateRoute
+                          exact path="/admin-user/:adminUserId/company/:companyId/invite-users"
                           component={InviteUsers}
                         />
                       </Switch>
                       <Switch>
                         <PrivateRoute
-                          exact path="/admin-user/adminUserId/company/companyId/new-company"
+                          exact path="/admin-user/:adminUserId/company/:companyId/new-company"
                           component={NewCompany}
                         />
                       </Switch>

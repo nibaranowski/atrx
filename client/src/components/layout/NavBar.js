@@ -28,6 +28,10 @@ class NavBar extends Component {
 
     render() {
         const { isAuthenticated, user } = this.props.auth;
+        const firstName= "";
+        if (user.name) {
+          const firstName = user.name.split(' ').slice(0, -1).join(' ');
+        }
 
         const navloggedIn = (
         <div>
@@ -194,7 +198,8 @@ class NavBar extends Component {
                             letterSpacing: 'normal',
                             color: '#3c3f54'
                           }}>
-                          Alok</span>
+                          {firstName}
+                          </span>
                         </a>
                         <div className="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                           {/* <a href="/#" className="dropdown-item p-0">

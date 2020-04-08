@@ -34,7 +34,7 @@ class InviteUsers extends Component {
 
     const companyData = {
         handle: encodeURIComponent(this.state.name),
-        name: this.state.name,
+        // name: this.state.name,
         errors: this.state.errors
     };
 
@@ -121,7 +121,7 @@ class InviteUsers extends Component {
               <div className="col-md-12 grid-margin stretch-card">
                 <div className="card">
                   {/* <div className="card-body"> */}
-                    {console.log('test-inside create company')}
+                    {/* {console.log('test-inside create company')} */}
                     {/* <h4 className="card-title">Start by creating</h4> */}
                     {/* <p className="card-description mb-1"> Let's get some information to make your company </p> */}
                     {/* <small className="text-muted">* required fields</small> */}
@@ -276,7 +276,9 @@ class InviteUsers extends Component {
                         </button>
                       </form>
                       <div className="template-demo">
-                        <Link className="dropdown-item" to={`/admin-user/adminUserId/company/companyId/new-company`}>
+                        {/* {console.log('props match params', this.props.match.params)} */}
+                        {/* <Link className="dropdown-item" to={`/admin-user/adminUserId/company/companyId/new-company`}> */}
+                        <Link className="dropdown-item" to={`/admin-user/${this.props.match.params.adminUserId}/company/${this.props.match.params.companyId}/new-company`}>
                           <button type="button" className="btn btn-success btn-fw">Skip</button>
                         </Link>
                       </div>

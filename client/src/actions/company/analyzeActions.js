@@ -2,7 +2,7 @@
 //
 // import {
 //   GET_ALL_COMPANYS,
-//   GET_ALL_COMPANYS_BY_ADMINUSER_ID,
+//   GET_COMPANY_BY_ADMINUSER_ID,
 //   GET_COMPANY_BY_COMPANY_ID,
 //   COMPANY_LOADING,
 //   CLEAR_CURRENT_COMPANY,
@@ -30,19 +30,19 @@
 // };
 //
 // //Get all companys by adminUser id
-// export const getAllCompanysByAdminUserId = adminUser_id => dispatch => {
+// export const getCompanyByAdminUserId = adminUser_id => dispatch => {
 //   dispatch(setCompanyLoading());
 //   axios
 //     .get(`/api/company/user/${adminUser_id}`)
 //     .then(res =>
 //       dispatch({
-//         type: GET_ALL_COMPANYS_BY_ADMINUSER_ID,
+//         type: GET_COMPANY_BY_ADMINUSER_ID,
 //         payload: res.data
 //       })
 //     )
 //     .catch(err =>
 //       dispatch({
-//         type: GET_ALL_COMPANYS_BY_ADMINUSER_ID,
+//         type: GET_COMPANY_BY_ADMINUSER_ID,
 //         payload: null
 //       })
 //     );

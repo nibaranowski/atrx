@@ -3,7 +3,7 @@
 .sidebar {
   min-height: calc(100vh - 63px);
   background: #ffffff;
-  font-family: "Cabin", sans-serif;
+  font-family: "CircularStd-Medium", sans-serif;
   padding: 0;
   width: 250px;
   z-index: 11;

@@ -5,9 +5,9 @@ const Department = require('./Department');
 
 //Create CompanySchema
 const CompanySchema = new Schema({
-    adminUser: {
+    adminUserId: {
       type: Schema.Types.ObjectId,
-      ref: 'adminUser' //AdminUser is name of collection exported from model User
+      ref: 'adminUserId' //AdminUser is name of collection exported from model User
     },
     name: {
       type: String,

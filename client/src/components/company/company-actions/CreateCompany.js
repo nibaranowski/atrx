@@ -13,6 +13,7 @@ class CreateCompany extends Component {
     super(props);
     this.state = {
       handle: '',
+      adminUserId: '',
       name: '',
       errors: {}
     };
@@ -32,8 +33,11 @@ class CreateCompany extends Component {
   onSubmit(e) {
     e.preventDefault();
 
+    console.log('this.state', this.state)
+
     const companyData = {
         handle: encodeURIComponent(this.state.name),
+        adminUserId: this.props.auth.user.id,
         name: this.state.name,
         errors: this.state.errors
     };
@@ -47,6 +51,7 @@ class CreateCompany extends Component {
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
+
   }
 
   render() {
@@ -121,7 +126,7 @@ class CreateCompany extends Component {
               <div className="col-md-12 grid-margin stretch-card">
                 <div className="card">
                   <div className="card-body">
-                    {console.log('test-inside create company')}
+                    {/* {console.log('test-inside create company')} */}
                     <h4 className="card-title">Create your Company</h4>
                     {/* <p className="card-description mb-1"> Let's get some information to make your company </p> */}
                     {/* <small className="text-muted">* required fields</small> */}
@@ -264,10 +269,12 @@ class CreateCompany extends Component {
 }
 CreateCompany.propTypes = {
   //company: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
-  company: state.company,
+  //company: state.company,
+  auth: state.auth,
   errors: state.errors
 });
 export default connect(mapStateToProps, { createCompany })(

@@ -132,12 +132,12 @@ fieldset:disabled a.btn {
 }
 .btn-info:hover {
   color: #fff;
-  background-color: #7042da;
+  background-color: #5C66FA;
   border-color: #6837d8;
 }
 .btn-info:focus, .btn-info.focus {
   color: #fff;
-  background-color: #7042da;
+  background-color: #5C66FA;
   border-color: #6837d8;
   box-shadow: 0 0 0 0.2rem rgba(154, 122, 229, 0.5);
 }

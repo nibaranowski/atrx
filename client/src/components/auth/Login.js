@@ -22,13 +22,15 @@ class Login extends Component {
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push(`/admin-user/${encodeURIComponent(this.state.email)}/create-or-join`);
+      // this.props.history.push(`/admin-user/${encodeURIComponent(this.state.email)}/create-or-join`);
+      this.props.history.push(`/admin-user/${this.props.auth.user.id}/create-or-join`);
     }
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push(`/admin-user/${encodeURIComponent(this.state.email)}/create-or-join`);//push to next page after login
+      // this.props.history.push(`/admin-user/${encodeURIComponent(this.state.email)}/create-or-join`);//push to next page after login
+      this.props.history.push(`/admin-user/${this.props.auth.user.id}/create-or-join`);//push to next page after login
     }
 
     if (nextProps.errors) {

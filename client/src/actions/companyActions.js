@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import {
   GET_ALL_COMPANYS,
-  GET_ALL_COMPANYS_BY_ADMINUSER_ID,
+  GET_COMPANY_BY_ADMINUSER_ID,
   GET_COMPANY_BY_COMPANY_ID,
   COMPANY_LOADING,
   CLEAR_CURRENT_COMPANY,
@@ -30,19 +30,19 @@ export const getAllCompanys = () => dispatch => {
 };
 
 //Get all companys by adminUser id
-export const getAllCompanysByAdminUserId = adminUser_id => dispatch => {
+export const getCompanyByAdminUserId = adminUser_id => dispatch => {
   dispatch(setCompanyLoading());
   axios
-    .get(`/api/company/user/${adminUser_id}`)
+    .get(`/api/company/admin-user/${adminUser_id}`)
     .then(res =>
       dispatch({
-        type: GET_ALL_COMPANYS_BY_ADMINUSER_ID,
+        type: GET_COMPANY_BY_ADMINUSER_ID,
         payload: res.data
       })
     )
     .catch(err =>
       dispatch({
-        type: GET_ALL_COMPANYS_BY_ADMINUSER_ID,
+        type: GET_COMPANY_BY_ADMINUSER_ID,
         payload: null
       })
     );
@@ -87,7 +87,8 @@ export const createCompany = (companyData, history) => dispatch => {
   console.log('companyData',companyData )
   axios
     .post('/api/company', companyData)
-    .then(res => history.push('/admin-user/adminUserId/company/companyId/invite-users')) // this is where we push to new page after action
+    // .then(resp => console.log('resp data id', resp.data._id))
+    .then(res => history.push(`/admin-user/${companyData.adminUserId}/company/${res.data._id}/invite-users`)) // this is where we push to new page after action
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

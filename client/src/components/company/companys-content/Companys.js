@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Spinner from '../../common/Spinner';
-import { getAllCompanysByAdminUserId } from '../../../actions/companyActions';
+import { getCompanyByAdminUserId } from '../../../actions/companyActions';
 import CompanyItem from './CompanyItem';
 import NavTree from '../../layout/NavTree';
 
 class Companys extends Component {
   componentDidMount() {
     if (this.props.match.params.user_id) {
-      this.props.getAllCompanysByAdminUserId(this.props.match.params.user_id);
+      this.props.getCompanyByAdminUserId(this.props.match.params.user_id);
       console.log('this props - companys: ', this.props)
     }
   }
@@ -68,4 +68,4 @@ const mapStateToProps = state => ({
   stop: state.stop,
 });
 
-export default connect(mapStateToProps, { getAllCompanysByAdminUserId })(Companys);
+export default connect(mapStateToProps, { getCompanyByAdminUserId })(Companys);
