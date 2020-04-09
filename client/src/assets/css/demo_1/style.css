@@ -16109,8 +16109,8 @@ ul li {
 
 /* Circle loader */
 .circle-loader {
-  width: 70px;
-  height: 70px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   position: relative;
   margin: 0 auto;
@@ -16125,8 +16125,8 @@ ul li {
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  border: 10px solid transparent;
-  border-top-color: #ffaf00;
+  border: 4px solid transparent;
+  border-top-color: #6672FB;
 }
 
 .circle-loader:before {
@@ -16135,7 +16135,7 @@ ul li {
 }
 
 .circle-loader:after {
-  border: 10px solid #e6eef2;
+  border: 4px solid #EFEFFB;
 }
 
 @keyframes spin {

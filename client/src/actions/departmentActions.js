@@ -87,7 +87,7 @@ export const createDepartment = (departmentData, history) => dispatch => {
   console.log('departmentData',departmentData )
   axios
     .post('/api/department', departmentData)
-    .then(res => history.push('/admin-user/adminUserId/department/departmentId/invite-users')) // this is where we push to new page after action
+    .then(res => history.push(`/admin-user/${departmentData.adminUserId}/company/${departmentData.companyId}/`)) // this is where we push to new page after action
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

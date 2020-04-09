@@ -4,11 +4,11 @@ const Team = require('./Team');
 
 //Create DepartmentSchema
 const DepartmentSchema = new Schema({
-    adminUser: {
+    adminUserId: {
       type: Schema.Types.ObjectId,
       ref: 'adminUser'
     },
-    company: {
+    companyId: {
       type: Schema.Types.ObjectId,
       ref: 'company'
     },

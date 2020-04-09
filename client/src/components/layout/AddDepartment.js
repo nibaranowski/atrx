@@ -15,6 +15,8 @@ class AddDepartment extends Component {
     super(props);
     this.state = {
       handle: '',
+      companyId: '',
+      adminuserId: '',
       name: '',
       errors: {},
       visible : false
@@ -47,9 +49,13 @@ class AddDepartment extends Component {
 
   onSubmit(e) {
     e.preventDefault();
+    console.log('this state here', this.state)
+    console.log('this props here', this.props)
 
     const departmentData = {
         handle: encodeURIComponent(this.state.name),
+        companyId: this.props.company.company._id,
+        adminUserId: this.props.auth.user.id,
         name: this.state.name,
         errors: this.state.errors
     };
@@ -66,6 +72,7 @@ class AddDepartment extends Component {
   }
 
   render() {
+    const { company } = this.props.company;
     const { errors } = this.state;
 
     // {/*let socialInputs;*/}
@@ -442,10 +449,14 @@ class AddDepartment extends Component {
 }
 AddDepartment.propTypes = {
   //department: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  company: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
+  auth: state.auth,
   department: state.department,
+  company: state.company,
   errors: state.errors
 });
 export default connect(mapStateToProps, { createDepartment })(

@@ -105,9 +105,11 @@ router.post(
     // Get fields
     const departmentFields = {};
     const adminUser = req.user;
-    departmentFields.adminUser = adminUser.id;
+    // departmentFields.adminUser = adminUser.id;
     //departmentFields.trip = req.body.trip;
+    departmentFields.adminUserId = req.body.adminUserId;
     departmentFields.name = req.body.name;
+    departmentFields.companyId = req.body.companyId;
     // if (req.body.order) departmentFields.order = req.body.order;
     if (req.body.handle) departmentFields.handle = req.body.handle;
     // if (req.body.name) departmentFields.name = req.body.name;
